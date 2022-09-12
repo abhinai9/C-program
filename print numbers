@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+	int p,q,r,i;
+	printf("print the start range p:");
+	scanf("%d",&p);
+	printf("\nprint the end range q:");
+	scanf("%d",&q);
+	printf("\nprint the r value r:");
+	scanf("%d",&r);
+	for(i=p;i<=q;i++)
+	{
+		if(i%10==r)
+		{
+			continue;
+		}
+		printf("\n%d",i);
+	}
+	return 0;
+}
