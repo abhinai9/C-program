@@ -2,19 +2,35 @@
 int main()
 {
 	int p,q,r,i;
-	printf("print the start range p:");
+	printf("Enter the value of p = ");
 	scanf("%d",&p);
-	printf("\nprint the end range q:");
+	printf("Enter the value of q = ");
 	scanf("%d",&q);
-	printf("\nprint the r value r:");
+	printf("Enter the value to be skipped = ");
 	scanf("%d",&r);
-	for(i=p;i<=q;i++)
+	if(int(p) && int(q))
 	{
-		if(i%10==r)
+		for(i=p;i<=q;i++)
 		{
-			continue;
+			if((i%10==r))
+			{
+				continue;
+			}
+      	if((i/10)%10==r)
+			{
+				continue;
+			}
+			if((i/100)%10==r)
+			{
+				continue;
+			}
+			printf("%d ",i);
 		}
-		printf("\n%d",i);
 	}
+	else 
+	{
+		printf("\nInvalid input");
+	}
+	
 	return 0;
 }
